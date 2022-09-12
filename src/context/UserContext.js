@@ -9,9 +9,14 @@ const UserContextProvider = ({ children }) => {
     e.preventDefault();
     setMe({ username: "claurennt", email: "claudia@wbs.com", isAdmin: true });
   };
+
+  const logout = (e) => {
+    e.preventDefault();
+    setMe();
+  };
   //children are the components wrapped by the provider
   return (
-    <UserContext.Provider value={{ me, login }}>
+    <UserContext.Provider value={{ me, login, logout }}>
       {children}
     </UserContext.Provider>
   );
