@@ -1,16 +1,21 @@
 import "./App.css";
+
 import Child from "./components/Child";
-import UserContext from "./context/UserContext";
+import { useUserContext } from "./context/UserContext";
 function App() {
-  const me = { username: "claurennt", email: "claudia@wbs.com", isAdmin: true };
+  const { login, me } = useUserContext();
 
   return (
-    <UserContext.Provider value={me}>
-      <div className="App">
+    <div className="App">
+      {me ? (
+        <h1>Welcome back {me.username}</h1>
+      ) : (
         <h1>App component - Parent</h1>
-        <Child />
-      </div>
-    </UserContext.Provider>
+      )}
+      <button onClick={login}>Login</button>
+
+      <Child />
+    </div>
   );
 }
 

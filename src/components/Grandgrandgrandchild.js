@@ -1,17 +1,20 @@
 import React from "react";
-import { useContext } from "react";
-import UserContext from "../context/UserContext";
+
+import { useUserContext } from "../context/UserContext";
 const Grandgrandgrandchild = () => {
-  const me = useContext(UserContext);
+  const { me } = useUserContext();
+
   return (
     <div className="Grandgrandgrandchild">
       <h5>Grandgrandgrandchild</h5>
-      <div>
-        <h6> Props should be displayed here:</h6>
-        <p>Username: {me.username}</p>
-        <p>Email: {me.email}</p>
-        <p>{me.isAdmin ? "admin" : "user"}</p>
-      </div>
+      <h6> Props should be displayed here:</h6>
+      {me && (
+        <div>
+          <p>Username: {me.username}</p>
+          <p>Email: {me.email}</p>
+          <p>{me.isAdmin ? "admin" : "user"}</p>
+        </div>
+      )}
     </div>
   );
 };

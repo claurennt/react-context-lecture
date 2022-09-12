@@ -2,10 +2,10 @@ import React from "react";
 
 import Grandchild from "./Grandchild";
 
-const Child = ({ me }) => (
+const Child = () => (
   <div className="Child">
     <h2>Child component</h2>
-    <Grandchild me={me} />
+    <Grandchild />
   </div>
 );
 
