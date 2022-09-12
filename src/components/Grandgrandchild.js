@@ -1,11 +1,11 @@
 import React from "react";
 
 import Grandgrandgrandchild from "./Grandgrandgrandchild";
-const Grandgrandchild = ({ me }) => (
+const Grandgrandchild = () => (
   <div className="Grandgrandchild">
     <h4>Grandgrandchild</h4>
 
-    <Grandgrandgrandchild me={me} />
+    <Grandgrandgrandchild />
   </div>
 );
 
