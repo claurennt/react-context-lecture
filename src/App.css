@@ -1,11 +1,19 @@
 .App {
   text-align: center;
-  background-color: #5d3fd3;
 }
 div {
   padding: 5%;
 }
 
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.light {
+  background-color: #5d3fd3;
+  color: black;
+}
 .Child {
   background-color: #8267be;
 }
@@ -20,5 +28,4 @@ div {
 
 .Grandgrandgrandchild {
   background-color: #f0d9ff;
-  color: #686868;
 }
